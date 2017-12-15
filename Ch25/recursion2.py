@@ -66,9 +66,39 @@ def recArray(nums, index, sum1, sum2 ):
 	return (recArray(nums, index + 1, sum1 + value, sum2) or recArray(nums, index + 1, sum1, sum2 + value))
 print(splitArray([5, 2, 3]))
 
+#splitOdd10
+def splitOdd10(nums):
+	index = 0
+	sum1 = 0
+	sum2 = 0
+	return recArray(nums, index, sum1, sum2)
 
-	
+def recArray(nums, index, sum1, sum2):
+	if index >= len(nums): 
+		return (sum1%10 == 0 and sum2% 2 != 0) or (sum2%10 == 0 and sum1% 2 != 0)
+	value = nums[index]
 
+	return (recArray(nums, index + 1, sum1 + value, sum2) or recArray(nums, index + 1, sum1, sum2 + value))
+print(splitOdd10([5, 5, 6, 1]))
+
+#split53
+def split53(nums):
+	index = 0
+	sum1 = 0
+	sum2 = 0
+	return recArray(nums, index, sum1, sum2)
+
+def recArray(nums, index, sum1, sum2):
+	if index >= len(nums):
+		return sum1 == sum2
+	value = nums[index]
+	if (value % 5 == 0):
+		return recArray(nums, index + 1, sum1 + value, sum2)
+	elif (value % 3 == 0):
+		return recArray(nums, index + 1, sum1, sum2 + value)
+	else:    
+		return (recArray(nums, index + 1, sum1 + value, sum2) or recArray(nums, index + 1, sum1, sum2 + value))
+print(split53([1, 1]))
 
 
 
