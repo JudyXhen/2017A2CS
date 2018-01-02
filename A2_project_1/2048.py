@@ -18,8 +18,8 @@ def display(v, score):
 #
 def init(v):
 	for i in range(4):
-		 for x in v[i]:
-			v[i] = [random.choice([0, 0, 0, 2, 2, 4])]
+		v[i] = [random.choice([0, 0, 0, 2, 2, 4]) for x in v[i]]
+
 			
 def align(vList, direction):
 	for i in range(vList.count(0)):
