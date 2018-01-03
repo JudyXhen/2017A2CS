@@ -1,0 +1,14 @@
+#Chapter 23
+#Computational thinking & Problem solving
+
+1. Abstract data types: collection of data with associated operations
+
+2. Hashing
+ - Function: Calculate address from key -> go to calculated address.
+ - Collision: two different key values hash to the same address
+ - ways to solve collision
+   ~ Chaining: creat linked list for collisions with start pointer at the hashed address.
+   ~ Overflow areas: all collisions are stored in a separate overflow area. —> open hashing
+   ~ Neighboring slots: linear search from the hashed address to find empty. -> closed hashing
+
+3. ADT dictionary: implemented using a hash table; a value can be looked up using a direct-access method. 
