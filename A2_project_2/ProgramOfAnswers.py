@@ -15,7 +15,7 @@ def SetUpGame():   #Start the game
 	input()
 	print('You come with a question, do you?')
 	input()
-	print('I am the program that you exactly need. I can answer every question.')
+	print('I am the program that you exactly need. I can answer every question, and guide you through your life.')
 	input()
 	print('Lets begin.')
 	input()
