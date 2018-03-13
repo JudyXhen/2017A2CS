@@ -33,7 +33,7 @@ class LibraryItem:
 		
 class Book(LibraryItem):
 	def __init__(self,t,a,i,bi):
-		LibraryItem.__init__(self, t, a, i,bi)
+		LibraryItem.__init__(self, t, a, i)
 		self.__IsRequested = False
 		self.__RequestedBy = 0
 		
@@ -50,8 +50,8 @@ class Book(LibraryItem):
 	
 	
 class CD(LibraryItem):
-	def __init__(self, t, a, i,bi):
-		LibraryItem.__init__(self, t, a, i,bi)	
+	def __init__(self, t, a, i):
+		LibraryItem.__init__(self, t, a, i)	
 		self.__Genre = ''
 		
 	def GetGenre(self):
@@ -136,13 +136,13 @@ def Menu():
 			Author = input("Author: ")
 			ItemID = NextBookID
 			NextBookID = NextBookID + 1
-			Book = Book(Title, Author, ItemID)
+			BookA = Book(Title, Author, ItemID)
 		elif Choice == 3:
 			Title = input("Title: ")
 			Artist = input("Artist: ")
 			ItemID = NextCD_ID
 			NextCD_ID = NextCD_ID + 1
-			CD = T_CD(Title, Artist, ItemID)
+			CDA = CD(Title, Artist, ItemID)
 		elif Choice == 4:
 			BorrowerID = input("Borrower ID: ")
 			ItemID = input("Book ID: ")
@@ -177,11 +177,5 @@ def Menu():
 		else:
 			print("wrong input")
 	input()
-Menu()
-		
 
 
-			
-			
-		
-		
