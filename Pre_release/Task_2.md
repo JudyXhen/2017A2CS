@@ -100,7 +100,15 @@ Bubble sort is a sorting algorithm that operates by going through the list to be
 Insertion sort is another sorting algorithm, which operates by inserting an element in the input list in to the correct position in a list (that is already sorted).
 
 Task 2.10
-
+#BubbleSort
+def BubbleSort(GameInfo): 
+	for i in range(len(GameInfo)):
+		for j in range(i, len(GameInfo)):
+			if GameInfo[i].GetPrice() > GameInfo[j].GetPrice():
+				Temp = GameInfo[i]
+				GameInfo[i] = GameInfo[j]
+				GameInfo[j] = Temp
+#InsertionSort
 
 
 
