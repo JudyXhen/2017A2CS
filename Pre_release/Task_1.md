@@ -7,7 +7,7 @@ The star symbol means repetition, which is to keep inputting values for differen
 The circle at right corner means selection, which represent Boolean variables.
 
 Task 1.3
- WHILE Finished == FALSE:
+ WHILE NOT EOF(SaleryFile)
   CALL ReadSalary
   IF Salary>50:
    THEN
