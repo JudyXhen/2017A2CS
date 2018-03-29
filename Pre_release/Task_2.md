@@ -1,6 +1,6 @@
 Task 2.3 
 class Toy:
-	def __init__(self,num,p,a):
+	def __init__(self,Name, num, p, a):
 		self.__Name = ''
 		self.__ID = num
 		self.__Price = p
@@ -25,19 +25,19 @@ class Toy:
 			print('Invalid')
 		
 Task 2.4
-class ComputerGame:
-	def __init__(self):
+class ComputerGame(Toy):
+	def __init__(self, Name, num, p, a, ca, co):
 		Toy.__init__(self)
-		self.__Category = ''
-		self.__Console = ''
-	def GetCategory(self):
-		return self.__Category
-	def GetConsole(self):
-		return self.__Console 
-	def SetCategory(self,c):
-		self.__Category = c
-	def SetConsole(self,c):
-		self.__Console = c
+		self.__Category = ca
+		self.__Console = co
+	def GetCategory(self, ca):
+		return self.__ca
+	def GetConsole(self, co):
+		return self.__co
+	def SetCategory(self,ca):
+		self.__Category = ca
+	def SetConsole(self,co):
+		self.__Console = co
 
 class Vehicle:
 	def __init__(self):
@@ -64,11 +64,19 @@ class Vehicle:
 		self.___Weight = w
 
 Task 2.5
-(Already in code)
+class Toy:
+	def __init__(self,Name, num, p, a):
+		Toy.SetName = (self, Name)
+		Toy.SetID = (self, num)
+		Toy.SetPrice = (self, p)
+		Toy.SetMinAge = (self, a)
+(Second part already in code. See line 22. )
 
 Task 2.6
 ToyInfo = []
 ToyA = Vehicle()
+vehicle.append('Red Sports Car','RSC13',15.00,6,'car',3.3,12.1,0.08)
+Vehicle.append('14d','L4D01',10,15,'FPS','PC')
 ToyA.SetName('Red Sports Car')
 ToyA.SetID('RSC13')
 ToyA.SetMiniAge(6)

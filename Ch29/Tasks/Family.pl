@@ -44,6 +44,10 @@ daughter(A, B) :-
 	parent(B, A),
 	female(A). 
 
+father(A, B) :-
+	parent(A, B),
+	male(A).
+
 
 
 
